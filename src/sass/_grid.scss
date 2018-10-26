@@ -1,0 +1,32 @@
+// Grid
+.container {
+  margin: 0 auto;
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+  @media (min-width: #{get-screen("md")}) {
+    width: 980px;
+  }
+  @media (min-width: #{get-screen("lg")}) {
+    width: 1260px;
+  }
+}
+
+.row {
+  margin-right: -($gutter / 2);
+  margin-left: -($gutter / 2);
+  font-size: 0;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+}
+
+@include generate-grid(null, 'start', $columns);
+@for $i from 1 through length($screens) {
+  @include generate-grid(nth($screens, $i), nth($prefixes, $i), $columns);
+}
+// Grid (END)

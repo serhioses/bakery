@@ -1,0 +1,39 @@
+// Button
+.button {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #9e9c93;
+  min-width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  background-color: transparent;
+  color: get-color("brown");
+  line-height: 50px;
+  font-family: unquote(get-font("emphasis"));
+  font-size: get-font-size("medium");
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &--block {
+    width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  &--dashed {
+    border-style: dashed;
+  }
+  &--theme_gray {
+    border-color: #9e9c93;
+    background-color: rgba(86, 83, 76, 0.53);
+    color: get-color("white");
+  }
+  &--font_small {
+    font-size: get-font-size("small");
+    letter-spacing: 3px;
+  }
+}
+// Button (END)

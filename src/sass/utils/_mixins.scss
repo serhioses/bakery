@@ -1,0 +1,90 @@
+@mixin font-face ($font-family, $filename, $weight: 400, $style: normal, $local1: null, $local2: null) {
+  $list: ();
+
+  @if ($local1) {
+    $list: append($list, local($local1));
+  }
+
+  @if ($local2) {
+    $list: append($list, local($local2));
+  }
+
+  $list: append($list, url("../fonts/" + $filename + ".ttf"));
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    src: to-string($list, ", ") format("truetype");
+  }
+}
+
+@mixin placeholder {
+  ::placeholder {@content}
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder {@content}
+  ::-moz-placeholder {@content}
+  :-ms-input-placeholder {@content}  
+}
+
+@mixin generate-grid($width, $prefix, $cols) {
+  @if $width {
+    @media (min-width: $width) {
+      .col-#{$prefix} {
+        @for $i from 1 through $cols {
+          &-#{$i} {
+            width: to-fixed(percentage(1 / $cols * $i), 4);
+          }
+        }
+      }
+      .col-offset-#{$prefix} {
+        @for $i from 0 through $cols {
+          &-#{$i} {
+            margin-left: to-fixed(percentage(1 / $cols * $i), 4);
+          }
+        }
+      }
+
+      .hidden-#{$prefix} {
+        display: none !important;
+      }
+      .visible-#{$prefix} {
+        display: block !important;
+      }
+    }
+  } @else {
+    .col-#{$prefix} {
+      @for $i from 1 through $cols {
+        &-#{$i} {
+          width: to-fixed(percentage(1 / $cols * $i), 4);
+        }
+      }
+    }
+    .col-offset-#{$prefix} {
+      @for $i from 0 through $cols {
+        &-#{$i} {
+          margin-left: to-fixed(percentage(1 / $cols * $i), 4);
+        }
+      }
+    }
+
+    .hidden-#{$prefix} {
+      display: none !important;
+    }
+    .visible-#{$prefix} {
+      display: block !important;
+    }
+  }
+}
+
+@mixin center-block ($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-center ($display: flex) {
+  display: $display;
+  justify-content: center;
+  align-items: center;
+}

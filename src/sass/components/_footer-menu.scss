@@ -1,0 +1,34 @@
+// Footer menu
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #c2beba;
+  border-bottom: 1px solid #c2beba;
+  &__link {
+    flex-shrink: 0;
+    width: calc(33.3333% - ((12px / 3) * 2));
+    line-height: 70px;
+    font-family: unquote(get-font("emphasis"));
+    font-size: get-font-size("small");
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__delimiter {
+    width: 12px;
+    font-size: get-font-size("small");
+    text-align: center;
+  }
+}
+
+@media (min-width: #{get-screen("sm")}) {
+  .footer-menu {
+    &__link {
+      width: auto;
+    }
+    &__delimiter {
+      width: auto;
+    }
+  }
+}
+// Footer menu (END)

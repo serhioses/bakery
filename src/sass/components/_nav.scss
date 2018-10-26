@@ -1,0 +1,126 @@
+// Nav
+$menu-item-gap-md: 40px;
+$menu-item-gap-lg: 80px;
+
+.nav-trigger {
+  &__icon {
+    &--close {
+      display: none;
+    }
+  }
+  &.js-nav-trigger-active {
+    .nav-trigger {
+      &__icon {
+        &--menu {
+          display: none;
+        }
+        &--close {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.nav {
+  width: 260px;
+  height: 100%;
+  padding: 90px 0 20px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(86, 83, 76);
+  position: fixed;
+  top: 0;
+  left: -260px;
+  z-index: 20;
+  @extend .transition;
+  &.js-nav-active {
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+  }
+  &__inner {
+    height: 100%;
+    overflow-y: auto;
+  }
+  &__link {
+    display: block;
+    margin-bottom: 16px;
+    padding: 16px 24px;
+    font-family: unquote(get-font("emphasis"));
+    font-size: get-font-size("small");
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.nav-overlay {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(86, 83, 76, 0.53);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  @extend .transition;
+  &.js-nav-overlay-active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: #{get-screen("md")}) {
+  .nav {
+    margin-left: 40px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    position: static;
+    transition: none;
+    &__inner {
+      display: flex;
+      height: 70px;
+      overflow: visible;
+    }
+    &__link {
+      margin-bottom: 0;
+      margin-right: $menu-item-gap-md;
+      padding: 0;
+      line-height: 70px;
+      position: relative;
+      &:last-child {
+        margin-right: 0;
+        &:after {
+          display: none;
+        }
+      }
+      &:after {
+        content: "\007E";
+        width: $menu-item-gap-md;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+@media (min-width: #{get-screen("lg")}) {
+  .nav {
+    margin-left: 100px;
+    &__link {
+      margin-right: $menu-item-gap-lg;
+      &:after {
+        width: $menu-item-gap-lg;
+      }
+    }
+  }
+}
+// Nav (END)

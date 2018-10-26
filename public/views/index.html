@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,td,th{text-align:left;font-weight:400;vertical-align:middle}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}button,input,optgroup,select,textarea{background:0 0;border:0;padding:0;margin:0;font:inherit;color:inherit;box-shadow:none}button{height:auto;cursor:pointer}button:focus{outline:0}button::-moz-focus-inner{outline:0;border:0;padding:0}
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="logo" href="/">
+              <img src="assets/images/logo.png" alt="" />
+            </a>
+            <nav class="nav js-nav">
+              <div class="nav__inner">
+                <a class="nav__link" href="#">Welcome</a>
+                <a class="nav__link" href="#">Menu</a>
+                <a class="nav__link" href="#">Reservations</a>
+                <a class="nav__link" href="#">News</a>
+                <a class="nav__link" href="#">Contact</a>
+              </div>
+            </nav>
+            <div class="header__socials c-flex c-flex--ai_c">
+              <a class="header__icon c-flex c-flex--jc_c c-flex--ai_c" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"  version="1.1" viewBox="0 0 56.693 56.693" fill="currentColor">
+                  <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+                </svg>
+              </a>
+              <a class="header__icon c-flex c-flex--jc_c c-flex--ai_c" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"  version="1.1" viewBox="0 0 56.693 56.693" fill="currentColor">
+                  <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+                </svg>
+              </a>
+              <a class="header__icon c-flex c-flex--jc_c c-flex--ai_c" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"  version="1.1" viewBox="0 0 56.693 56.693" fill="currentColor">
+                  <path d="M52.837,15.065c-1.811,0.805-3.76,1.348-5.805,1.591c2.088-1.25,3.689-3.23,4.444-5.592c-1.953,1.159-4.115,2-6.418,2.454  c-1.843-1.964-4.47-3.192-7.377-3.192c-5.581,0-10.106,4.525-10.106,10.107c0,0.791,0.089,1.562,0.262,2.303  c-8.4-0.422-15.848-4.445-20.833-10.56c-0.87,1.492-1.368,3.228-1.368,5.082c0,3.506,1.784,6.6,4.496,8.412  c-1.656-0.053-3.215-0.508-4.578-1.265c-0.001,0.042-0.001,0.085-0.001,0.128c0,4.896,3.484,8.98,8.108,9.91  c-0.848,0.23-1.741,0.354-2.663,0.354c-0.652,0-1.285-0.063-1.902-0.182c1.287,4.015,5.019,6.938,9.441,7.019  c-3.459,2.711-7.816,4.327-12.552,4.327c-0.815,0-1.62-0.048-2.411-0.142c4.474,2.869,9.786,4.541,15.493,4.541  c18.591,0,28.756-15.4,28.756-28.756c0-0.438-0.009-0.875-0.028-1.309C49.769,18.873,51.483,17.092,52.837,15.065z"/>
+                </svg>
+              </a>
+              <button class="header__icon header__icon--menu nav-trigger c-flex c-flex--jc_c c-flex--ai_c hidden-md js-nav-trigger" type="button">
+                <svg class="nav-trigger__icon nav-trigger__icon--menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+                <svg class="nav-trigger__icon nav-trigger__icon--close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </button>
+            </div>
+            <div class="nav-overlay js-nav-overlay"></div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <div class="section intro bg-image c-flex c-flex--jc_c c-flex--ai_c c-text-center" style='background-image: url("assets/images/intro.jpg");'>
+          <div class="container">
+            <div class="row">
+              <div class="column col-sm-10 col-md-8">
+                <div class="intro__inner">
+                  <div class="intro__content">
+                    <p class="intro__title">Pastry with love</p>
+                    <div class="intro__decor"></div>
+                    <p class="intro__desc">
+                      We’re bringing you fresh ingredients every day in ways you can’t resist.
+                    </p>
+                    <div class="intro__button">
+                      <a class="button button--block button--dashed button--theme_gray  button--font_small" href="#">Our menu</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="intro__icon"></div>
+        </div>
+        <div class="section preamble bg-image">
+          <div class="container">
+            <div class="row">
+              <div class="column col-md-6">
+                <div class="preamble__content">
+                  <h1 class="h1">Art of cakes</h1>
+                  <p class="sub-title">We create delicious memories</p>
+                  <p class="preamble__descr">
+                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.
+                  </p>
+                  <div class="chef-cook">
+                    <p class="chef-cook__title">Chef Cook</p>
+                    <div class="chef-cook__person">
+                      <div class="chef-cook__name">Benito</div>
+                      <div class="chef-cook__ava bg-image" style='background-image: url("assets/tmp_images/chef-cook-ava.png")'></div>
+                      <div class="chef-cook__name">Gaspare</div>
+                    </div>
+                    <p class="chef-cook__phrase">
+                      Unique creations for unique <br />occasions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="column col-md-6">
+                <div class="preamble-tiles">
+                  <div class="row">
+                    <div class="column col-start-6">
+                      <div class="preamble-tiles__item bg-image" style='background-image: url("assets/tmp_images/art-cakes-1.jpg");'></div>
+                    </div>
+                    <div class="column col-start-6">
+                      <div class="preamble-tiles__item bg-image" style='background-image: url("assets/tmp_images/art-cakes-2.jpg");'></div>
+                    </div>
+                    <div class="column col-start-6">
+                      <div class="preamble-tiles__item bg-image" style='background-image: url("assets/tmp_images/art-cakes-3.jpg");'></div>
+                    </div>
+                    <div class="column col-start-6">
+                      <div class="preamble-tiles__item bg-image" style='background-image: url("assets/tmp_images/art-cakes-4.jpg");'></div>
+                    </div>
+                  </div>
+                  <div class="preamble-tiles__phrase hidden-start visible-sm">
+                    Tastes so<br />good!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="column col-sm-5">
+              <div class="footer-menu">
+                <a class="footer-menu__link" href="#">Our menu</a>
+                <span class="footer-menu__delimiter">~</span>
+                <a class="footer-menu__link" href="#">Gallery</a>
+                <span class="footer-menu__delimiter">~</span>
+                <a class="footer-menu__link" href="#">Culture</a>
+              </div>
+            </div>
+            <div class="column col-sm-2">
+              <figure class="footer__logo c-flex c-flex--jc_c c-flex--ai_c">
+                <img src="assets/images/footer-logo.png" alt="" />
+              </figure>
+            </div>
+            <div class="column col-sm-5">
+              <div class="footer-menu">
+                <a class="footer-menu__link" href="#">Events</a>
+                <span class="footer-menu__delimiter">~</span>
+                <a class="footer-menu__link" href="#">Catering</a>
+                <span class="footer-menu__delimiter">~</span>
+                <a class="footer-menu__link" href="#">Visit us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/common.js"></script>
+  </body>
+</html>

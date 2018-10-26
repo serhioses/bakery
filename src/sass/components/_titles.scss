@@ -1,0 +1,18 @@
+// Titles
+.h1 {
+  margin-bottom: 6px;
+  font-family: unquote(get-font("emphasis"));
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+}
+
+.sub-title {
+  color: get-color("brown");
+  font-family: unquote(get-font("emphasis"));
+  font-size: get-font-size("small");
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+// Titles (END)

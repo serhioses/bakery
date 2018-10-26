@@ -1,0 +1,100 @@
+// Intro
+.intro {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  &__inner {
+    position: relative;
+    &:before {
+      content: "";
+      border-radius: 50%;
+      width: 100vmin;
+      height: 100vmin;
+      background-image: radial-gradient(rgba(86, 79, 76, 0.71) 0%, rgba(255, 255, 255, 0) 70%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    color: get-color("white");
+    font-family: unquote(get-font("special"));
+    font-size: 3rem;
+    letter-spacing: 0.75px;
+    text-shadow: 0px 1px 0px #3d3029;
+  }
+  &__decor {
+    margin: 32px auto 48px;
+    width: 190px;
+    height: 12px;
+    background: url("../images/sprite.png") no-repeat -2px -2px;
+  }
+  &__desc {
+    margin: 0 auto 34px;
+    max-width: 550px;
+    color: get-color("white");
+    line-height: 1.5;
+    font-size: get-font-size("medium");
+    letter-spacing: 1px;
+    text-shadow: 0px 1px 0px #3d3029;
+  }
+  &__button {
+    margin: 0 auto;
+    width: 200px;
+  }
+  &__icon {
+    width: 106px;
+    height: 106px;
+    background: url("../images/sprite.png") no-repeat -2px -16px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50px);
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:before {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: get-color("white");
+      box-shadow: 0px 8px 9px rgba(0,0,0,0.03);
+    }
+    &:after {
+      width: 50px;
+      height: 45px;
+      background: url("../images/sprite.png") no-repeat -110px -16px;
+    }
+  }
+}
+
+@media (min-width: #{get-screen("sm")}) {
+  .intro {
+    &__decor {
+      margin-top: 42px;
+      margin-bottom: 56px;
+    }
+    &__desc {
+      margin-bottom: 56px;
+    }
+  }
+}
+@media (min-width: #{get-screen("md")}) {
+  .intro {
+    padding-top: 160px;
+    &__title {
+      font-size: 4rem;
+    }
+  }
+}
+// Intro (END)

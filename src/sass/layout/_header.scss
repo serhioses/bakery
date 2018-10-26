@@ -1,0 +1,41 @@
+// Header
+.header {
+  width: 100%;
+  background-color: rgba(86, 83, 76, 0.53);
+  color: get-color("white");
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+  &__socials {
+    margin-left: auto;
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    &--menu {
+      position: relative;
+      z-index: 30;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  z-index: 30;
+}
+
+@media (min-width: 544px) {
+  .header {
+    &__icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+// Header (END)

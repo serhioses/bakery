@@ -1,0 +1,81 @@
+// Chef cook
+.chef-cook {
+  margin: 0 auto;
+  max-width: 400px;
+  &__title {
+    margin-bottom: 36px;
+    font-family: unquote(get-font("emphasis"));
+    font-size: get-font-size("ultraLarge");
+    font-weight: 700;
+    letter-spacing: 0.25px;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__name {
+    border-top: 1px solid #d7d5ca;
+    border-bottom: 1px solid #d7d5ca;
+    width: 80px;
+    height: 50px;
+    line-height: 48px;
+    font-family: unquote(get-font("emphasis"));
+    font-size: get-font-size("medium");
+    text-align: center;
+    letter-spacing: 0.25px;
+  }
+  &__ava {
+    margin: 0 20px;
+    border: 5px solid get-color("white");
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 7px 9px rgba(0,0,0,0.02);
+  }
+  &__phrase {
+    padding: 20px 0;
+    color: get-color("brown");
+    line-height: 1;
+    font-family: unquote(get-font("handwrite"));
+    font-size: 1.75rem;
+    position: relative;
+    &:before, &:after {
+      height: 40px;
+      opacity: 0.5;
+      font-family: "Times New Roman", serif;
+      font-size: to-rem(60);
+      line-height: 1;
+      position: absolute;
+    }
+    &:before {
+      content: "“";
+      top: -5px;
+      left: 0;
+    }
+    &:after {
+      content: "”";
+      bottom: -13px;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .chef-cook {
+    &__name {
+      width: 110px;
+      height: 60px;
+      line-height: 58px;
+      font-size: get-font-size("ultraLarge");
+    }
+    &__ava {
+      margin-right: 20px;
+      margin-left: 20px;
+      width: 110px;
+      height: 110px;
+    }
+  }
+}
+// Chef cook (END)
