@@ -15,4 +15,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+@media (min-width: #{get-screen("md")}) {
+  .h1 {
+    font-size: 3rem;
+  }
+}
 // Titles (END)

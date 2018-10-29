@@ -1,0 +1,27 @@
+// Cook time
+
+.cook-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: unquote(get-font("emphasis"));
+  font-weight: 700;
+  background: url("../images/sprite.png") no-repeat -2px -410px;
+  width: 200px;
+  height: 200px;
+  background-color: get-color("white");
+  &__title {
+    color: get-color("brown");
+    text-transform: uppercase;
+    font-size: get-font-size("small");
+    letter-spacing: 1px;
+  }
+  &__duration {
+    font-size: 90px;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+}
+
+// Cook time (END)
